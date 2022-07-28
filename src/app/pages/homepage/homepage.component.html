@@ -1,0 +1,8 @@
+<p>homepage works!</p>
+<input type="text" [(ngModel)]="citySearch" (ngModelChange)="loadData()" />
+
+<div *ngIf="!loading">
+  <h2>{{ weatherCityName }} - {{ weatherCityCountry }}</h2>
+  <p>{{ (weatherTemp.temp - 273.15).toFixed(0) }}°C</p>
+  <p>{{ weatherDescription }}</p>
+</div>
