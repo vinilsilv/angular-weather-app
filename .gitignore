@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 #API Data
+/src/apidata.ts

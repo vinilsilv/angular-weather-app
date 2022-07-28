@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { API_DATA } from 'src/apidata';
 
-const API_URL = environment.API_URL;
-const API_KEY = environment.API_KEY;
+const API_URL = API_DATA.API_URL;
+const API_KEY = API_DATA.API_KEY;
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
