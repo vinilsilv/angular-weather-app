@@ -1,8 +1,10 @@
-<p>homepage works!</p>
-<input type="text" [(ngModel)]="citySearch" (ngModelChange)="loadData()" />
+<div class="main-wrapper">
+  <input class="search-input" placeholder="Search cities" type="text" [(ngModel)]="citySearch" (ngModelChange)="loadData()" />
 
-<div *ngIf="!loading">
-  <h2>{{ weatherCityName }} - {{ weatherCityCountry }}</h2>
-  <p>{{ (weatherTemp.temp - 273.15).toFixed(0) }}°C</p>
-  <p>{{ weatherDescription }}</p>
+  <div class="inner-wrapper" *ngIf="!loading">
+    <h1 class="city">{{ weatherCityName }}</h1>
+    <p class="description">{{ weatherDescription }}</p>
+    <p class="temperature">{{ (weatherTemp.temp - 273.15).toFixed(0) }}°</p>
+    <p class="max-min-temp">H:{{(maxTemp - 273.15).toFixed(0)}}° L:{{(minTemp - 273.15).toFixed(0)}}°</p>
+  </div>
 </div>
